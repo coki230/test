@@ -6,7 +6,7 @@ import net.bytebuddy.matcher.ElementMatchers;
 
 import java.util.function.Function;
 
-public class DynamicType {
+public class DynamicTypeDemo {
     public static class GreetingInterceptor {
         public Object greet(Object arg) {
             return "hello from " + arg;
@@ -19,7 +19,7 @@ public class DynamicType {
                 .method(ElementMatchers.named("apply"))
                 .intercept(MethodDelegation.to(new GreetingInterceptor()))
                 .make()
-                .load(DynamicType.class.getClassLoader())
+                .load(DynamicTypeDemo.class.getClassLoader())
                 .getLoaded();
 
         Function function = (Function) dynamicType.newInstance();
