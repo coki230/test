@@ -9,9 +9,10 @@
     <bookmark url="file://D:/work/cloud-monitor/oap-server/server-library/library-module/src/main/java/org/apache/skywalking/oap/server/library/module/ApplicationConfiguration.java" description="return providers.get(name).getProperties();" line="60" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8029c5c8-bace-4b8e-8f8c-6c517cafcfa9" name="Default Changelist" comment="新内容添加">
+    <list default="true" id="8029c5c8-bace-4b8e-8f8c-6c517cafcfa9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/instrumentation/Attach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/instrumentation/Attach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/instrumentation/Attach.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/instrumentation/Attach.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,50 +42,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="940">
-              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/es/Test.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/Attach.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+            <state relative-caret-position="420">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/elasticsearch-rest-high-level-client/6.6.2/elasticsearch-rest-high-level-client-6.6.2-sources.jar!/org/elasticsearch/client/RestHighLevelClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="294" column="20" lean-forward="true" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.6.2/elasticsearch-6.6.2-sources.jar!/org/elasticsearch/common/CheckedConsumer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -129,7 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/test/B.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/TestHistogram.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/TestCount.java" />
         <option value="$PROJECT_DIR$/src/main/java/es/TestCardinalityCount.java" />
@@ -156,7 +120,6 @@
         <option value="$PROJECT_DIR$/src/main/java/jvm/DynamicProxyTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/jvm/GenericTypes.java" />
         <option value="$PROJECT_DIR$/src/main/java/jvm/PrintCompilation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/instrumentation/Attach.java" />
         <option value="$PROJECT_DIR$/src/main/java/bytebuddy/FirstDemo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Function.java" />
         <option value="$PROJECT_DIR$/src/main/java/bytebuddy/agent/TimingInterceptor.java" />
@@ -180,6 +143,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/grpc/test.proto" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/jvm/JvmInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/instrumentation/Attach.java" />
       </list>
     </option>
   </component>
@@ -218,8 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -251,12 +214,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="es" type="462c0819:PsiDirectoryNode" />
+              <item name="instrumentation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="jvm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,18 +253,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\learn\test\instrumentation\src\main\META-INF" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\learn\test\src\main\java\instrumentation" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jvm" />
       <recent name="kafka" />
       <recent name="bytebuddy.foo" />
       <recent name="thread" />
       <recent name="es" />
-      <recent name="bytebuddy" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\learn\test\src\main\java\instrumentation" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\learn\test\instrumentation\src\main\META-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -306,13 +279,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="kafka.Consumer" />
+  <component name="RunManager" selected="Application.Attach">
+    <configuration name="Attach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="instrumentation.Attach" />
       <module name="test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="kafka.*" />
+          <option name="PATTERN" value="instrumentation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -320,12 +293,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DoNoLoadClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="bytebuddy.DoNoLoadClass" />
+    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kafka.Consumer" />
       <module name="test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="bytebuddy.*" />
+          <option name="PATTERN" value="kafka.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -367,19 +340,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DoNoLoadClass" />
       <item itemvalue="Application.Test" />
       <item itemvalue="Application.TestMainInJar" />
       <item itemvalue="Application.Producer" />
       <item itemvalue="Application.Consumer" />
+      <item itemvalue="Application.Attach" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Attach" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.Producer" />
         <item itemvalue="Application.TestMainInJar" />
-        <item itemvalue="Application.DoNoLoadClass" />
       </list>
     </recent_temporary>
   </component>
@@ -433,6 +406,8 @@
       <workItem from="1571642738208" duration="3058000" />
       <workItem from="1571709148174" duration="7935000" />
       <workItem from="1572919158767" duration="1933000" />
+      <workItem from="1573179028922" duration="197000" />
+      <workItem from="1574406985673" duration="2724000" />
     </task>
     <task id="LOCAL-00001" summary="新内容添加">
       <created>1569374129321</created>
@@ -455,26 +430,35 @@
       <option name="project" value="LOCAL" />
       <updated>1571807039492</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="新内容添加">
+      <created>1573179206363</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573179206363</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238899000" />
+    <option name="totallyTimeSpent" value="241820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3011727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3075693" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="GraphQL" />
+      <window_info anchor="bottom" id="JProfiler" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40303358" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40303358" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -482,7 +466,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32827735" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -576,16 +560,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/bytebuddy/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12-sources.jar!/net/bytebuddy/dynamic/loading/ClassReloadingStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
@@ -741,13 +715,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/TransClass.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/TransformerTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/TestMainInJar.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/InsMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/Trans.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -787,16 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/Attach.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -980,9 +937,30 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/grpc/test.proto" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/elasticsearch-rest-high-level-client/6.6.2/elasticsearch-rest-high-level-client-6.6.2-sources.jar!/org/elasticsearch/client/RestHighLevelClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="294" column="20" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.6.2/elasticsearch-6.6.2-sources.jar!/org/elasticsearch/common/CheckedConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jvm/JvmInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
+        <state relative-caret-position="554">
           <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
         </state>
       </provider>
@@ -994,24 +972,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/elasticsearch/6.6.2/elasticsearch-6.6.2-sources.jar!/org/elasticsearch/common/CheckedConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/elasticsearch/client/elasticsearch-rest-high-level-client/6.6.2/elasticsearch-rest-high-level-client-6.6.2-sources.jar!/org/elasticsearch/client/RestHighLevelClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="294" column="20" lean-forward="true" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/es/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/InsMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/instrumentation/Attach.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -11,23 +11,29 @@ import java.util.Properties;
 public class Attach {
     public static void main(String[] args) throws InterruptedException, IOException, AttachNotSupportedException {
         Attach attach = new Attach();
-//        attach.showThread();
         attach.attach();
+//        attach.attach();
     }
 
     private void showThread() throws InterruptedException {
         while (true) {
-            for (VirtualMachineDescriptor descriptor : VirtualMachine.list()) {
-                System.out.println(descriptor);
-            }
+            getThread();
             Thread.sleep(10000);
         }
     }
 
+    private void getThread() {
+        for (VirtualMachineDescriptor descriptor : VirtualMachine.list()) {
+            System.out.println(descriptor);
+        }
+    }
+
     private void attach() throws IOException, AttachNotSupportedException {
-        VirtualMachine virtualMachine = VirtualMachine.attach("13268");
+        VirtualMachine virtualMachine = VirtualMachine.attach("70924");
         Properties agentProperties = virtualMachine.getAgentProperties();
         System.out.println(agentProperties);
         System.out.println();
     }
+
+
 }
