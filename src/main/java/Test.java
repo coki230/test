@@ -2,22 +2,41 @@ import com.sun.tools.javac.util.ArrayUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
+import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Test {
 
-    public static void main(String[] args) throws ParseException {
-        String aa ="2019-10-09T06:00:00.000Z";
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        df.setTimeZone(TimeZone.getTimeZone("UTC"));
-        System.out.println(df.parse(aa).toLocaleString());
+    private int ek;
 
-        Float f = new Float(0.7949);
-        System.out.println(f * 100);
+    public int getEk() {
+        return ek;
+    }
+
+    public void setEk(int ek) {
+        this.ek = ek;
+    }
+
+    public static void main(String[] args) throws ParseException {
+        Test test1 = new Test();
+        test1.setEk(1);
+        Test test2 = new Test();
+        test2.setEk(1);
+        Map<Test, Test> map = new HashMap<>();
+        map.put(test1, test1);
+        System.out.println(map.containsKey(test2));
+
+    }
+
+    public int hashCode() {
+        return 1;
+    }
+
+    public boolean equals(Object o) {
+        if (o.getClass() == Test.class) {
+            return this.ek == ((Test) o).getEk();
+        }
+        return false;
     }
 }
