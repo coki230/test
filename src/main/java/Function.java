@@ -1,7 +1,19 @@
 public class Function {
     public static void main(String[] args) {
-        Function f = new Function();
-        f.testCompose();
+//        Function f = new Function();
+//        f.testCompose();
+
+        String a = "aaa";
+        String b = "aaa";
+        String c = new String("aaa");
+        String d = "aa";
+        String e = d + "a";
+
+        System.out.println(a.hashCode());
+        System.out.println(b.hashCode());
+        System.out.println(c.hashCode());
+        System.out.println(d.hashCode());
+        System.out.println(e.hashCode());
     }
 
     private void testApply() {

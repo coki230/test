@@ -8,14 +8,7 @@ import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.SearchHit;
-import org.elasticsearch.search.aggregations.Aggregation;
-import org.elasticsearch.search.aggregations.AggregationBuilder;
-import org.elasticsearch.search.aggregations.AggregationBuilders;
-import org.elasticsearch.search.aggregations.Aggregations;
-import org.elasticsearch.search.aggregations.bucket.terms.Terms;
-import org.elasticsearch.search.aggregations.metrics.cardinality.Cardinality;
-import org.elasticsearch.search.aggregations.metrics.cardinality.ParsedCardinality;
-import org.elasticsearch.search.aggregations.metrics.sum.ParsedSum;
+import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 
 import java.io.IOException;
@@ -25,27 +18,64 @@ public class Test {
     public static void main(String[] args) throws IOException {
         RestHighLevelClient client = new RestHighLevelClient(
                 RestClient.builder(
-                        new HttpHost("10.9.9.70", 19200, "http")));
-
-
-
-        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
-        // 根据字段count进行聚合，聚合后的数据放到桶by_count里
-        AggregationBuilder aggregationBuilder = AggregationBuilders.terms("service_id").field("service_id");
-        searchSourceBuilder.query(boolQueryBuilder);
-        searchSourceBuilder.aggregation(aggregationBuilder);
-        SearchRequest searchRequest = new SearchRequest("span_info");
-        searchRequest.types("type");
-        searchRequest.source(searchSourceBuilder);
-        SearchResponse searchResponse = client.search(searchRequest);
-        Aggregations aggregations = searchResponse.getAggregations();
-        Terms all = aggregations.get("service_id");
-        for (Terms.Bucket bucket : all.getBuckets()) {
-            System.out.println(bucket.getKeyAsString());
-            System.out.println(bucket.getDocCount());
-        }
+                        new HttpHost("10.65.3.17", 19200, "http")));
+        Test test = new Test();
+        test.getServiceInstance(client);
 
         client.close();
     }
+
+
+
+    public void getServiceInstance(RestHighLevelClient client) throws IOException {
+        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+        // dops-backend "service_id", 2
+        boolQueryBuilder.must().add(QueryBuilders.termQuery("source_service_id", 2));
+        boolQueryBuilder.must().add(QueryBuilders.termQuery("dest_service_id", 183));
+        boolQueryBuilder.must().add(QueryBuilders.rangeQuery("start_time").gte(1579224610000L).lte(1579224620000L));
+        searchSourceBuilder.query(boolQueryBuilder);
+        SearchRequest searchRequest = new SearchRequest("cloud-monitor_service_instance_relation-20200117");
+        searchRequest.types("type");
+        searchSourceBuilder.size(100);
+        searchRequest.source(searchSourceBuilder);
+        SearchResponse searchResponse = client.search(searchRequest);
+        SearchHits hits = searchResponse.getHits();
+        System.out.println(hits.totalHits);
+        SearchHit[] hits1 = hits.getHits();
+        for (SearchHit searchHit : hits1) {
+            Map<String, Object> sourceAsMap = searchHit.getSourceAsMap();
+            System.out.println("=============================================");
+            System.out.println(sourceAsMap);
+            System.out.println("=============================================");
+        }
+    }
+
+
+    public void getSegmentData(RestHighLevelClient client) throws IOException {
+        SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
+        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+        // dops-backend "service_id", 2
+        boolQueryBuilder.must().add(QueryBuilders.termQuery("service_id", 2));
+        boolQueryBuilder.must().add(QueryBuilders.termQuery("endpoint_name", "/dops/project"));
+        boolQueryBuilder.must().add(QueryBuilders.rangeQuery("start_time").gte(1579224610000L).lte(1579224620000L));
+        searchSourceBuilder.query(boolQueryBuilder);
+        SearchRequest searchRequest = new SearchRequest("cloud-monitor_segment-20200117");
+        searchRequest.types("type");
+        searchSourceBuilder.size(100);
+        searchRequest.source(searchSourceBuilder);
+        SearchResponse searchResponse = client.search(searchRequest);
+        SearchHits hits = searchResponse.getHits();
+        System.out.println(hits.totalHits);
+        SearchHit[] hits1 = hits.getHits();
+        for (SearchHit searchHit : hits1) {
+            Map<String, Object> sourceAsMap = searchHit.getSourceAsMap();
+            System.out.println("=============================================");
+            System.out.println(hits1.length);
+            System.out.println(sourceAsMap.get("data_binary"));
+
+            System.out.println("=============================================");
+        }
+    }
+
 }
