@@ -1,9 +1,7 @@
 package thread;
 
 import java.util.Date;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class ThreadTest {
     public static void main(String[] args) {

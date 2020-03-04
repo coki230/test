@@ -2,6 +2,7 @@ package reference;
 
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * @author liuhaibo on 2018/03/06
@@ -10,6 +11,8 @@ public class WeakRefDemo {
 
     public static void main(String... args) {
 
+
+        LinkedBlockingQueue linkedBlockingQueue;
         // all these objects have a strong reference
         Object a = new Object();
         Object b = new Object();
