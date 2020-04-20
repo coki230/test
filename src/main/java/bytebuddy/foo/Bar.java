@@ -1,5 +1,5 @@
 package bytebuddy.foo;
 
 public class Bar {
-    String m() {return "bar";}
+    public String m() {return "bar";}
 }

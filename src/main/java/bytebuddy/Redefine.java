@@ -1,5 +1,7 @@
 package bytebuddy;
 
+import bytebuddy.foo.Bar;
+import bytebuddy.foo.Foo;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.agent.ByteBuddyAgent;
 import net.bytebuddy.dynamic.loading.ClassReloadingStrategy;

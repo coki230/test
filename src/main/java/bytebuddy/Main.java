@@ -1,10 +1,17 @@
 package bytebuddy;
 
+import bytebuddy.foo.Bar;
+import bytebuddy.foo.Foo;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.agent.ByteBuddyAgent;
 import net.bytebuddy.dynamic.ClassFileLocator;
 import net.bytebuddy.dynamic.loading.ClassReloadingStrategy;
+import net.bytebuddy.implementation.bind.annotation.SuperCall;
 import net.bytebuddy.pool.TypePool;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.Callable;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException {
@@ -42,4 +49,5 @@ public class Main {
 
         System.out.println(Class.forName("foo.Bar").getFields());
     }
+
 }

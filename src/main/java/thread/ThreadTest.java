@@ -1,7 +1,9 @@
 package thread;
 
 import java.util.Date;
+import java.util.Hashtable;
 import java.util.concurrent.*;
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 public class ThreadTest {
     public static void main(String[] args) {
@@ -12,6 +14,7 @@ public class ThreadTest {
     }
 
     private static void doSome() {
+        Hashtable hashtable;
         System.out.println(new Date());
         System.out.println(1 / 0);
     }
