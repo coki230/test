@@ -61,7 +61,12 @@
             <artifactId>hutool-all</artifactId>
             <version>4.0.9</version>
         </dependency>
-
+<!--        添加storm依赖-->
+        <dependency>
+            <groupId>org.apache.storm</groupId>
+            <artifactId>storm-core</artifactId>
+            <version>1.0.4</version>
+        </dependency>
     </dependencies>
 
     <build>
